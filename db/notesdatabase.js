@@ -30,8 +30,8 @@ class NotesDatabase{
         notes.forEach(function(note, index){
             if (note.id == id){
                 notes.splice(index, 1);
-            }
-        })
+            };
+        });
         fs.writeFileSync(path.join(__dirname+ '/db.json'), JSON.stringify(notes));
     }
 
