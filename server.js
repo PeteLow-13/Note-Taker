@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3001;
 const path = require('path');
-const NotesDatabase = require('./db/NotesDatabase');
+const NotesDatabase = require('./db/notesDatabase');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
