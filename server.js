@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 3001;
+let PORT = process.env.PORT || 3001;
 const path = require('path');
 const NotesDatabase = require('./db/notesDatabase');
 
@@ -39,6 +39,6 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log("example app listening");
 });
