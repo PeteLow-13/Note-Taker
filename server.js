@@ -5,7 +5,7 @@ let PORT = process.env.PORT || 3001;
 const path = require('path');
 const NotesDatabase = require('./db/notesDatabase.js');
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get("/", function(req, res) {
